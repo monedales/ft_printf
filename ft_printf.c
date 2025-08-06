@@ -6,29 +6,12 @@
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 16:40:47 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/08/05 16:07:50 by maria-ol         ###   ########.fr       */
+/*   Updated: 2025/08/06 14:38:39 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
-
-int	ft_putchar(char c)
-{
-	ft_putchar_fd(c, 1);
-	return (1);
-}
-
-int	ft_putstr(char *str)
-{
-	size_t	len;
-
-	if (str == NULL)
-		str = "(null)";
-	len = ft_strlen(str);
-	ft_putstr_fd(str, 1);
-	return (len);
-}
 
 //"cspdiuxX"
 static int	check_specifier(char specifier, va_list args)
@@ -37,10 +20,8 @@ static int	check_specifier(char specifier, va_list args)
 		return (ft_putchar(va_arg(args, int)));
 	else if (specifier == 's')
 		return (ft_putstr(va_arg(args, char *)));
-	else if (specifier == 'd')
-		return (1);
-	else if (specifier == 'i')
-		return (1);
+	else if (specifier == 'd' || specifier == 'i')
+		return (ft_putnbr(va_arg(args, int)));
 	else if (specifier == 'u')
 		return (1);
 	else if (specifier == 'p')
@@ -51,7 +32,6 @@ static int	check_specifier(char specifier, va_list args)
 		return (1);
 	return (0);
 }
-
 
 int	ft_printf(const char *format, ...)
 {
@@ -71,7 +51,6 @@ int	ft_printf(const char *format, ...)
 		}
 		else
 		{
-			// ft_putchar(format);
 			write(1, &format[index], 1);
 			printed_chars++;
 		}
@@ -81,13 +60,27 @@ int	ft_printf(const char *format, ...)
 	return (printed_chars);
 }
 
-
-#include "ft_printf.h"
-
 int	main(void)
 {
-	char *str = "deu bom";
+	char	*str = "deu bom!";
+	char	c = '$';
+	int	i = 42;
+	int	int_min = -2147483648;
+	unsigned int	u = 4294967295;
 
-	ft_printf("testando? %s\n", str);
+	printf("<--------->\n");
+	printf("\nORIGIN_Total retornado em c: %d\n", printf("%c", c));
+	ft_printf("\nFAKE_Total retornado em c: %d\n", ft_printf("%c", c));
+	printf("<--------->\n");
+	printf("\nORIGIN_Total retornado na str %d\n", printf("%s", str));
+	ft_printf("\nFAKE_Total retornado na str %d\n", ft_printf("%s", str));
+	printf("<--------->\n");
+	printf("\nORIGIN_Total retornado em i: %d\n", printf("%i", i));
+	ft_printf("\nFAKE_Total retornado em i: %d\n", ft_printf("%i", i));
+	printf("<--------->\n");
+	printf("\nORIGIN_Total retornado em int min: %d\n", printf("%d", int_min));
+	ft_printf("\nFAKE_Total retornado em int min: %d\n",
+		ft_printf("%d", int_min));
+	printf("<--------->\n");
 	return (0);
 }
