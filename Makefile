@@ -6,7 +6,8 @@ RM = rm -rf
 INC = -I .
 CP = cp
 SRC = \
-	ft_printf.c	ft_print_numbers.c	ft_print_chars.c
+	ft_printf.c	ft_print_numbers.c \
+	ft_print_chars.c ft_print_hexptr.c
 LIBFT_PATH = libft
 LIBFT = ${LIBFT_PATH}/libft.a
 OBJS = $(SRC:.c=.o)

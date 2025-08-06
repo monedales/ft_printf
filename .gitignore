@@ -1,2 +1,6 @@
 libft/
 .vscode/
+printfTester/
+
+
+.gitignore
