@@ -6,14 +6,14 @@
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 16:40:47 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/08/06 14:38:39 by maria-ol         ###   ########.fr       */
+/*   Updated: 2025/08/06 16:54:54 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-//"cspdiuxX"
+//"cspdiuxX%"
 static int	check_specifier(char specifier, va_list args)
 {
 	if (specifier == 'c')
@@ -23,13 +23,15 @@ static int	check_specifier(char specifier, va_list args)
 	else if (specifier == 'd' || specifier == 'i')
 		return (ft_putnbr(va_arg(args, int)));
 	else if (specifier == 'u')
-		return (1);
+		return (ft_putnbr_unsigned(va_arg(args, unsigned int)));
 	else if (specifier == 'p')
 		return (1);
 	else if (specifier == 'x')
 		return (1);
 	else if (specifier == 'X')
 		return (1);
+	else if (specifier == '%')
+		return (ft_putchar('%'));
 	return (0);
 }
 
@@ -65,8 +67,8 @@ int	main(void)
 	char	*str = "deu bom!";
 	char	c = '$';
 	int	i = 42;
-	int	int_min = -2147483648;
-	unsigned int	u = 4294967295;
+	int	int_min = -2147483648; //INT_MIN
+	unsigned int	u = 4294967295; //UINT_MAX
 
 	printf("<--------->\n");
 	printf("\nORIGIN_Total retornado em c: %d\n", printf("%c", c));
@@ -81,6 +83,10 @@ int	main(void)
 	printf("\nORIGIN_Total retornado em int min: %d\n", printf("%d", int_min));
 	ft_printf("\nFAKE_Total retornado em int min: %d\n",
 		ft_printf("%d", int_min));
+	printf("<--------->\n");
+	printf("\nORIGIN_Total retornado em long max: %u\n", printf("%u", u));
+	ft_printf("\nFAKE_Total retornado em long max: %u\n",
+		ft_printf("%u", u));
 	printf("<--------->\n");
 	return (0);
 }

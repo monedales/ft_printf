@@ -6,7 +6,7 @@
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 16:15:33 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/08/06 13:45:30 by maria-ol         ###   ########.fr       */
+/*   Updated: 2025/08/06 16:48:15 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,6 @@ int		ft_printf(const char *format, ...);
 int		ft_putchar(char c);
 int		ft_putstr(char *str);
 int		ft_putnbr(int n);
+int		ft_putnbr_unsigned(unsigned int n);
 
 #endif
