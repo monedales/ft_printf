@@ -8,11 +8,12 @@ CP = cp
 SRC = \
 	ft_printf.c	ft_print_numbers.c \
 	ft_print_chars.c ft_print_hexptr.c
+
 LIBFT_PATH = libft
 LIBFT = ${LIBFT_PATH}/libft.a
 OBJS = $(SRC:.c=.o)
 
-all: $(NAME)
+all: $(NAME) banner
 
 banner:
 	@echo ""
@@ -34,6 +35,7 @@ banner:
 	@echo "       ,-\" \\  :      | :"
 	@echo "      ( .-\" \\ \`.__   | |"
 	@echo "       \\__)  \`.__,'  |__)  louiS"
+	@echo "no r3l!Nk =O"
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(INC) -c $< -o $@

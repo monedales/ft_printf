@@ -6,19 +6,32 @@
 /*   By: maria-ol <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 17:01:23 by maria-ol          #+#    #+#             */
-/*   Updated: 2025/08/06 17:03:40 by maria-ol         ###   ########.fr       */
+/*   Updated: 2025/08/07 12:42:04 by maria-ol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
-
+/**
+ * @brief Writes the character 'c' to standard output.
+ *
+ * @param c The character to write.
+ * @return Returns 1 on success.
+ */
 int	ft_putchar(char c)
 {
 	ft_putchar_fd(c, 1);
 	return (1);
 }
 
+/**
+ * @brief Writes the string 'str' to standard output.
+ *
+ * If 'str' is NULL, writes "(null)" instead.
+ *
+ * @param str Pointer to the string to write.
+ * @return Number of characters written.
+ */
 int	ft_putstr(char *str)
 {
 	size_t	len;
