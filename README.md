@@ -47,8 +47,11 @@ It supports the following specifiers:
 ---
 
 ## Instructions ⚙️
-- Run the command `make` to compile the `libftprintf.a` library.
-After the compilation is complete, you can use the libftprintf.a library in your projects.
+- Run the command `make` to compile the  library.
+```bash
+make
+```
+This will create the `libftprintf.a` library, which you can link to your projects.
 
 To clean the object files generated during compilation, run the command `make clean`.
 To remove the libftprintf.a library, run the command `make fclean`.
@@ -56,16 +59,16 @@ To recompile the entire project, run the command `make re`.
 
 ## Grade: 100 / 100 🏅
 I did not implemented yet the bonus for this project since I wanted to focus on reviewing what Iǘe learned so far and focus on studying for the MileStone 02 exam.
-
+```
 ## Used Tests 🧪
 - [Francinette] (https://github.com/xicodomingues/francinette)
 - [printfTester] (https://github.com/Tripouille/printfTester)
 
 ## Useful Links 🔗
-- Variadic functions in C – GeeksforGeeks
-- stdarg.h documentation – cppreference
-- Understanding printf format specifiers – Tutorialspoint
-- Hexadecimal formatting in C – Stack Overflow
+- [Variadic functions in C – GeeksforGeeks] (https://www.geeksforgeeks.org/c/variadic-functions-in-c/)
+- [stdarg.h documentation – Tutorialspoint] (https://www.tutorialspoint.com/c_standard_library/stdarg_h.htm)
+- [Understanding printf format specifiers] – Tutorialspoint (https://www.tutorialspoint.com/cprogramming/c_format_specifiers.htm)
+- [Hexadecimal Table Conversion] (https://pater.web.cip.com.br/SI2017_2/quadros/TABELA_DE_CONVERSAO_HEXADECIMAL.pdf)
 
 ## License 📜
 This project was developed for academic purposes at 42, but feel free to use it as reference or inspiration.
