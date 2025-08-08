@@ -67,12 +67,12 @@ make fclean
 make re
 ```
 
-## Grade: 100 / 100 🏅
-I did not implemented yet the bonus for this project since I wanted to focus on reviewing what Iǘe learned so far and focus on studying for the MileStone 02 exam.
-
 ## Used Tests 🧪
 - [Francinette](https://github.com/xicodomingues/francinette)
 - [printfTester](https://github.com/Tripouille/printfTester)
+
+## Grade: 100 / 100 🏅
+I did not implemented yet the bonus for this project since I wanted to focus on reviewing what I've learned so far and focus on studying for the MileStone 02 exam.
 
 ## Useful Links 🔗
 - [Variadic functions in C – GeeksforGeeks](https://www.geeksforgeeks.org/c/variadic-functions-in-c/)
