@@ -20,14 +20,14 @@ It supports the following specifiers:
 - ` ` Add a space sign before absolute numbers
 - `0` zero-pad output
 - `.` specify precision
----
+
 ## Technologies & Concepts 🛠️ 
 - C language
 - Uses variadic arguments for flexible input handling.
 - `<stdarg.h>` library for variable arguments
 - Code modularization
 - Integration with libft
----
+
 ## Source Code Structure 📂
 * **`ft_printf.c`**  
   Main entry point for the `ft_printf` function.  
