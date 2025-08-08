@@ -1,10 +1,11 @@
 # ft_printf 🖨️ 
 A recreation of the printf function from the C standard library, implemented as part of the 42 curriculum to deepen knowledge about variable argument handling and output formatting.
+
 ---
 ## Description 📜
 ft_printf works similarly to the original printf, allowing you to format and print data to the standard output.
 It supports the following specifiers:
----
+
 - `%c` → character
 - `%s` → string
 - `%p` → pointer
@@ -59,7 +60,7 @@ To recompile the entire project, run the command `make re`.
 
 ## Grade: 100 / 100 🏅
 I did not implemented yet the bonus for this project since I wanted to focus on reviewing what Iǘe learned so far and focus on studying for the MileStone 02 exam.
-```
+
 ## Used Tests 🧪
 - [Francinette] (https://github.com/xicodomingues/francinette)
 - [printfTester] (https://github.com/Tripouille/printfTester)
